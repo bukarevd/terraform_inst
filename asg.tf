@@ -3,6 +3,7 @@
 resource "aws_launch_configuration" "asg_instance" {
   image_id = "ami-0080e4c5bc078760e"
   instance_type = "t2.micro"
+  key_name = "NVirginia_home"
   security_groups = ["${aws_security_group.anywhere_new.id}"]
   user_data = <<-EOF
             #!/bin/bash
@@ -10,7 +11,7 @@ resource "aws_launch_configuration" "asg_instance" {
             yum -y install httpd
             service httpd start
             chkconfig httpd on
-            echo "heelo world" > /var/www/index.html
+            echo "hello world "  > /var/www/html/index.html
             EOF
   lifecycle {
     create_before_destroy = true
