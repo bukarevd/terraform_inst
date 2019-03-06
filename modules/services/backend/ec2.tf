@@ -16,7 +16,7 @@ resource "aws_instance" "test" {
 }
 
 resource "aws_security_group" "anywhere_new" {
-  name = "anywhere_new"
+  name = "${var.cluster_name}-elb"
 
   ingress {
     from_port = "${var.port}"
@@ -37,9 +37,5 @@ resource "aws_security_group" "anywhere_new" {
 }
 
 
-
-output "publicIP" {
-  value = "${aws_elb.elb.dns_name}"
-}
 
 
