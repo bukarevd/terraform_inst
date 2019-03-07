@@ -14,7 +14,7 @@ variable "max" {
 default = "11"
 }
 module "backend_example" {
-   source = "github.com/bukarevd/terraform_inst/modules/services/backend"
+   source = "./backend"
   cluster_name = "${var.cluster_name}"
    }
 
