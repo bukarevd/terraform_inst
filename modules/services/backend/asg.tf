@@ -22,7 +22,7 @@ data "aws_availability_zones" "all" {}
 
 resource "aws_autoscaling_group" "asg_instance" {
   max_size ="${var.max}"
-  min_size = "${var.min}"Л
+  min_size = "${var.min}"
 
   launch_configuration = "${aws_launch_configuration.asg_instance.id}"
   availability_zones = ["${data.aws_availability_zones.all.names}"]
