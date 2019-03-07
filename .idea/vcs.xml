@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/services/.terraform/modules/6d5e9709f2867b9c34e46964841f835b" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/services/.terraform/modules/ded72789502616a6aaf2e969daa24022" vcs="Git" />
   </component>
 </project>

@@ -4,6 +4,7 @@ variable "port" {
 }
 
 resource "aws_instance" "test" {
+  count = 3
   ami = "ami-0080e4c5bc078760e"
   instance_type = "t2.micro"
 
@@ -11,7 +12,7 @@ resource "aws_instance" "test" {
   vpc_security_group_ids = ["${aws_security_group.anywhere_new.id}"]
 
   tags {
-    Name = "testServer"
+    Name = "testServer.${count.index}"
   }
 }
 
